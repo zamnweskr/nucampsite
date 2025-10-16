@@ -34,7 +34,8 @@
                     <h2>a better way to camp</h2>
                 </div>
                 <div class="col-12 col-md-4 col-xl-2 mt-4">
-                    <button type="button" class="btn btn-info btn-lg text-white text-nowrap" data-bs-toggle="modal" data-bs-target="#reserveModal">Reserve Campsite</button>
+                    <button type="button" class="btn btn-info btn-lg text-white text-nowrap" data-bs-toggle="modal"
+                        data-bs-target="#reserveModal">Reserve Campsite</button>
                 </div>
             </div>
         </div>
@@ -82,11 +83,13 @@
                             <div class="row">
                                 <div class="mb-3 col-12">
                                     <label class="sr-only" for="loginEmail">Email address</label>
-                                    <input type="email" class="form-control form-control-sm" id="loginEmail" placeholder="Enter Email">
+                                    <input type="email" class="form-control form-control-sm" id="loginEmail"
+                                        placeholder="Enter Email">
                                 </div>
                                 <div class="mb-3 col-12">
                                     <label class="sr-only" for="loginPassword">Password</label>
-                                    <input type="password" class="form-control form-control-sm" id="loginPassword" placeholder="Password">
+                                    <input type="password" class="form-control form-control-sm" id="loginPassword"
+                                        placeholder="Password">
                                 </div>
                                 <div class="col">
                                     <div class="form-check mb-3">
@@ -97,7 +100,8 @@
                             </div>
                             <div class="row">
                                 <div class="col">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
                                     <button type="button" class="btn btn-primary">Save Changes</button>
                                 </div>
                             </div>
@@ -118,7 +122,9 @@
                 </div>
                 <div class="modal-body">
                     <div class="container-fluid">
-                        <form id="reserveForm" action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata" method="post">
+                        <form id="reserveForm"
+                            action="https://us-central1-nucamp-production.cloudfunctions.net/post/formdata"
+                            method="post">
                             <div class="row mb-3">
                                 <div class="col-12 col-sm-6">
                                     <label class="form-label" for="numberofcampers">Number of Campers</label>
@@ -159,6 +165,54 @@
 
     <!-- main section -->
     <main class="container">
+
+        <!--Carousel-->
+        <section class="row row-content">
+            <div class="col-md-8 mx-auto">
+                <div id="homeCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" ></button>
+                        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" ></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground">
+                            <div class="carousel-caption">
+                                <h3>Breadcrumb Trail Campground</h3>
+                                <p class="d-none d-sm-block">Let Nucamp be your guide to this
+                                    off-the-beaten-path,hike-in-only campground.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground">
+                            <div class="carousel-caption">
+                                <h3>React Lake Campground</h3>
+                                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this
+                                    campground on the shores of the pristine React Lake is a favorite for fly fishers.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground">
+                            <div class="carousel-caption">
+                                <h3>Chrome River Campground</h3>
+                                <p class="d-none d-sm-block">Spend a few sunny days and starry nights beneath a canopy
+                                    of old-growth firs at this enchanting spot by the chrome river.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#homeCarousel" role="botton" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#homeCarousel" role="button" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+        </section>
 
         <!-- discover section -->
         <div class="row row-content align-items-center">
