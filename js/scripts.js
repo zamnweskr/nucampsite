@@ -24,7 +24,7 @@ async function fetchWeather() {
     try {
         const apiKey = process.env.OPEN_WEATHER_API_KEY;
         const city = 'Franklin';
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
         let response = await fetch(url);
         let data = await response.json();
         displayWeather(data);
@@ -42,11 +42,16 @@ function displayWeather(data) {
 
     const temp = data.main.temp;
     const tempNode = document.querySelector('#weather-temp');
-    tempNode.textContent = temp;
+    tempNode.textContent = temp + '\u00B0' + 'C';
 
     const desc = data.weather[0].description;
     const descNode = document.querySelector('#weather-description');
     descNode.textContent = desc;
+
+    const city = data.name;
+    const cityNode = document.querySelector('#city');
+    cityNode.textContent = city;
+    
 
 }
 
